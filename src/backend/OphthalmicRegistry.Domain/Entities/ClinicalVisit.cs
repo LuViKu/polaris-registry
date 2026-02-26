@@ -27,4 +27,11 @@ public class ClinicalVisit
             CreatedAt = DateTimeOffset.UtcNow,
         };
     }
+
+    public void WithClinicalData(string? bestCorrectedVisualAcuity, string? intraocularPressure, string? clinicalNotes)
+    {
+        BestCorrectedVisualAcuity = bestCorrectedVisualAcuity;
+        IntraocularPressure = intraocularPressure;
+        ClinicalNotes = clinicalNotes;
+    }
 }

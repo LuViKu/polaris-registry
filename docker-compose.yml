@@ -100,6 +100,19 @@ services:
       timeout: 10s
       retries: 5
 
+  oct-converter:
+    build:
+      context: ./src/oct-converter
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
   backend:
     build:
       context: ./src/backend
@@ -114,6 +127,14 @@ services:
       Redis__ConnectionString: "${REDIS_CONNECTION_STRING:-redis:6379}"
       RabbitMQ__Host: ${RABBITMQ_HOST:-rabbitmq}
       Pseudonymization__HmacKey: ${PSEUDONYMIZATION_HMAC_KEY}
+      Minio__Endpoint: "http://minio:9000"
+      Minio__AccessKey: ${MINIO_ACCESS_KEY:-minioadmin}
+      Minio__SecretKey: ${MINIO_SECRET_KEY:-change_me_in_production}
+      Minio__BucketName: ${MINIO_BUCKET:-ophthalmic-imaging}
+      Orthanc__Url: "http://orthanc:8042"
+      Orthanc__Username: ${ORTHANC_USERNAME:-orthanc}
+      Orthanc__Password: ${ORTHANC_PASSWORD:-orthanc}
+      OctConverter__Url: "http://oct-converter:8080/"
     ports:
       - "5000:5000"
     depends_on:

@@ -10,6 +10,8 @@ public class ImagingStudyConfiguration : IEntityTypeConfiguration<ImagingStudy>
     {
         builder.HasKey(i => i.Id);
         builder.Property(i => i.Modality).IsRequired().HasMaxLength(50);
+        builder.Property(i => i.FileFormat).IsRequired().HasMaxLength(20);
+        builder.Property(i => i.OriginalFileName).HasMaxLength(500);
         builder.Property(i => i.OrthancStudyId).HasMaxLength(64);
         builder.Property(i => i.MinioObjectKey).HasMaxLength(500);
         builder.HasOne(i => i.ClinicalVisit).WithMany(v => v.ImagingStudies).HasForeignKey(i => i.ClinicalVisitId);

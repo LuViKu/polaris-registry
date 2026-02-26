@@ -63,6 +63,7 @@ yarn-error.log*
 pnpm-debug.log*
 .pnpm-store/
 out/
+tsconfig.tsbuildinfo
 
 # Environment
 .env
