@@ -1,0 +1,24 @@
+{
+  "Name": "OphthalmicRegistry-Orthanc",
+  "StorageDirectory": "/var/lib/orthanc/db",
+  "IndexDirectory": "/var/lib/orthanc/db",
+  "StorageCompression": false,
+  "MaximumStorageSize": 0,
+  "MaximumPatientCount": 0,
+  "HttpServerEnabled": true,
+  "HttpPort": 8042,
+  "DicomServerEnabled": true,
+  "DicomPort": 4242,
+  "DicomAet": "OPHTHALMIC",
+  "AuthenticationEnabled": true,
+  "RegisteredUsers": {
+    "orthanc": "REPLACE_WITH_STRONG_PASSWORD_BEFORE_DEPLOYMENT"
+  },
+  "RemoteAccessAllowed": true,
+  "SslEnabled": false,
+  "Plugins": [],
+  "OverwriteInstances": false,
+  "CaseSensitivePN": false,
+  "LuaScripts": [],
+  "Modifications": {}
+}
