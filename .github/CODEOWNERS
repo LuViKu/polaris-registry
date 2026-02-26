@@ -1,0 +1,19 @@
+# Global owners
+* @ophthalmic-registry/core-team
+
+# Backend
+/src/backend/ @ophthalmic-registry/backend-team
+
+# Frontend
+/src/frontend/ @ophthalmic-registry/frontend-team
+
+# Infrastructure
+/infra/ @ophthalmic-registry/infra-team
+/docker-compose.yml @ophthalmic-registry/infra-team
+
+# CI/CD
+/.github/workflows/ @ophthalmic-registry/devops-team
+
+# Documentation
+/docs/ @ophthalmic-registry/core-team
+README.md @ophthalmic-registry/core-team
