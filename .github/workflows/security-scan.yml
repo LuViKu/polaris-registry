@@ -63,7 +63,6 @@ jobs:
           format: "HTML"
           args: >
             --enableRetired
-            --suppression .github/owasp-suppressions.xml
 
       - name: Upload OWASP report
         uses: actions/upload-artifact@v4

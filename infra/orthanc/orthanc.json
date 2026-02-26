@@ -12,7 +12,7 @@
   "DicomAet": "OPHTHALMIC",
   "AuthenticationEnabled": true,
   "RegisteredUsers": {
-    "orthanc": "change_me_in_production"
+    "orthanc": "REPLACE_WITH_STRONG_PASSWORD_BEFORE_DEPLOYMENT"
   },
   "RemoteAccessAllowed": true,
   "SslEnabled": false,
