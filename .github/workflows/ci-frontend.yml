@@ -16,6 +16,8 @@ jobs:
   build-lint-typecheck:
     name: Build, Lint & Type-Check (Next.js 14)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     defaults:
       run:
